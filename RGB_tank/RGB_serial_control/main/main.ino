@@ -61,22 +61,22 @@ void recvWithEndMarker() {
  char endMarker = '\n';
  char rc;
 
- // if (Serial.available() > 0) {
-           while (Serial.available() > 0 && newData == false) {
- rc = Serial.read();
+ while (Serial.available() > 0 && newData == false) {
 
- if (rc != endMarker) {
- receivedChars[ndx] = rc;
- ndx++;
- if (ndx >= numChars) {
- ndx = numChars - 1;
- }
- }
- else {
- receivedChars[ndx] = '\0'; // terminate the string
- ndx = 0;
- newData = true;
- }
+   rc = Serial.read();
+
+   if (rc != endMarker) {
+       receivedChars[ndx] = rc;
+       ndx++;
+     if (ndx >= numChars) {
+       ndx = numChars - 1;
+     }
+   }
+   else {
+     receivedChars[ndx] = '\0'; // terminate the string
+     ndx = 0;
+     newData = true;
+   }
  }
 }
 
@@ -84,7 +84,8 @@ void showNewData() {
  if (newData == true) {
  Serial.print("This just in ... ");
  Serial.println(receivedChars);
- pixel_value = (uint8_t)receivedChars;
+ // pixel_value = (uint8_t)receivedChars;
+ pixel_value = atoi(receivedChars);
  Serial.println(pixel_value);
  newData = false;
  threepixeldemo(pixel_value);
