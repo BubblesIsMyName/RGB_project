@@ -89,30 +89,15 @@ void recvWithEndMarker() {
  }
 }
 
-// void showNewData() {
-//  if (newData == true) {
-//    Serial.print("This just in ... ");
-//    Serial.println(receivedChars);
-//
-//    pixel_value = atoi(receivedChars);
-//    Serial.println(pixel_value);
-//    int strin_lentth = sizeof(receivedChars);
-//    Serial.println(strin_lentth);
-//
-//    newData = false;
-//    threepixeldemo(pixel_value);
-//  }
-// }
-
-
 void showNewData() {
  if (newData == true) {
    uint8_t rd_pix = 0;
    uint8_t gr_pix = 0;
    uint8_t bl_pix = 0;
-   char ard_pix[20];
-   char agr_pix[20];
-   char abl_pix[20];
+   //The arays need to be initiallised otherwise you'll get inccorret values.
+   char ard_pix[] = {0,0,0,0,0};
+   char agr_pix[] = {0,0,0,0,0};
+   char abl_pix[] = {0,0,0,0,0};
    int rd=0,gr=0,bl=0;
 
    Serial.print("This just in ... ");
@@ -151,25 +136,6 @@ void showNewData() {
    threepixeldemo(rd_pix,gr_pix,bl_pix);
  }
 }
-
-// void setup() {
-//   if(!setup_flag){
-//     Serial.begin(9600);
-//     Serial.println("<Arduino is ready>");
-//     setup_flag = true;
-//   }
-// }
-
-// int main(void) {
-//   setup();
-//   for(;;){
-//     // while(Serial.available()>0){
-//     // Serial.println("Serial available");
-//     // }
-//     recvWithEndMarker();
-//     showNewData();
-//   }
-// }
 
 void setup() {
   Serial.begin(9600);
