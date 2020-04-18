@@ -1,0 +1,26 @@
+/*body {
+  margin: 40px;
+}*/
+
+.wrapper {
+  display: grid;
+  /* changed from absolute size to relative*/
+  grid-template-columns: 50% auto;
+  grid-gap: 5px;
+  /* background-color: #fff; */
+  /* color: #444; */
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.photosMy{
+    /* width: 250px; */
+    width: 100%;
+    border-radius: 5px;
+}

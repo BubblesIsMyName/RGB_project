@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+  <body>
+    <!-- <aside>
+
+      <figure>
+        <div id="avatar"></div>
+        <figcaption>Gatis Jurkans</figcaption>
+      </figure>
+
+      <img class="corner" src="images/menu.svg">
+
+      <nav>
+        <ul>
+          <li><a href="/index.html">home</a></li>
+          <li><a href="/pages/photos2.html">photography</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">other</a></li>
+        </ul>
+      </nav>
+
+    </aside> -->
+    <main>
+      <h1>Make Things Interesting</h1>
+      <p>The more I learn the better I get, let's make something cool, why not?</p>
+      <a href="/bin-cgi/click.py" class="cta">click</a>
+      <a href="/bin-cgi/serial.py" class="cta">serial</a>
+    </main>
+    <script>
+      (function(){
+          var menu = document.querySelector('ul'),
+              menulink = document.querySelector('img');
+
+          menulink.addEventListener('click',function(e){
+              menu.classList.toggle('active');
+              e.preventDefault();
+          });
+      })();
+    </script>
+  </body>
+
+</html>
