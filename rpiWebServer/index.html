@@ -29,12 +29,17 @@
 
     </aside> -->
     <main>
-      <h1>Make Things Interesting</h1>
-      <p>The more I learn the better I get, let's make something cool, why not?</p>
-      <a href="/bin-cgi/click.py" class="cta">click</a>
-      <a href="/bin-cgi/serial.py" class="cta">serial</a>
+      <h1>Enter the colour values.</h1>
+      <!-- <p>The more I learn the better I get, let's make something cool, why not?</p> -->
+      <form action = "/cgi-bin/my_serial.cgi" method = "post">
+      Red Colour value: <input type = "text" name = "red"><br />
+      Green Colour value: <input type = "text" name = "green"><br />
+      Blue Colour value: <input type = "text" name = "blue" />
+
+      <input type = "submit" value = "Submit" />
+      </form>
     </main>
-    <script>
+    <!-- <script>
       (function(){
           var menu = document.querySelector('ul'),
               menulink = document.querySelector('img');
@@ -44,7 +49,7 @@
               e.preventDefault();
           });
       })();
-    </script>
+    </script> -->
   </body>
 
 </html>
