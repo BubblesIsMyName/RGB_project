@@ -7,49 +7,28 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="/css/main.css">
   </head>
-
   <body>
-    <!-- <aside>
-
-      <figure>
-        <div id="avatar"></div>
-        <figcaption>Gatis Jurkans</figcaption>
-      </figure>
-
-      <img class="corner" src="images/menu.svg">
-
-      <nav>
-        <ul>
-          <li><a href="/index.html">home</a></li>
-          <li><a href="/pages/photos2.html">photography</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">other</a></li>
-        </ul>
-      </nav>
-
-    </aside> -->
     <main>
-      <h1>Enter the colour values.</h1>
-      <!-- <p>The more I learn the better I get, let's make something cool, why not?</p> -->
-      <form action = "/cgi-bin/my_serial.cgi" method = "post">
-      Red Colour value: <input type = "text" name = "red"><br />
-      Green Colour value: <input type = "text" name = "green"><br />
-      Blue Colour value: <input type = "text" name = "blue" />
+      <h1>SELECT THE COLOR</h1>
 
+      <!-- Parts used by colour picker canvas ++ -->
+      <div class="container">
+        <canvas id="color-picker"></canvas>
+        <div class="info">
+          <!-- <h3>Selected Color</h3>
+          <div class="selected"></div> -->
+        </div>
+      </div>
+      <!-- Parts used by colour picker canvas -- -->
+
+      <form action = "/cgi-bin/my_serial.cgi" method = "post">
+      Red Colour value: <input id= "red" type = "text" name = "red"><br />
+      Green Colour value: <input id = "green" type = "text" name = "green"><br />
+      Blue Colour value: <input id = "blue" type = "text" name = "blue" /><br />
       <input type = "submit" value = "Submit" />
       </form>
     </main>
-    <!-- <script>
-      (function(){
-          var menu = document.querySelector('ul'),
-              menulink = document.querySelector('img');
-
-          menulink.addEventListener('click',function(e){
-              menu.classList.toggle('active');
-              e.preventDefault();
-          });
-      })();
-    </script> -->
+    <script src='/JS/colorPicker.js'></script>
   </body>
 
 </html>

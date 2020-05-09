@@ -1,181 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
 
-body, html{
-  height: calc(100% - 2em);
+
+h1{
   margin: 0;
   font-family: 'Cute Font';
 }
 
-body{
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#565656+0,a5a5a5+100 */
-  background: rgb(86,86,86); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(86,86,86,1) 0%, rgba(165,165,165,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(86,86,86,1) 0%,rgba(165,165,165,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(86,86,86,1) 0%,rgba(165,165,165,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565656', endColorstr='#a5a5a5',GradientType=0 ); /* IE6-9 */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+h3{
+  font-family: 'Cute Font';
+
 }
 
-aside{
-  color: white;
-  display: grid;
-  grid-template-columns: auto 40px;
-  padding: 2em;
-}
+/* Styling for the canvas */
 
-/* img{ */
-.corner{
-  width: 40px;
-  cursor: pointer;
-}
-/* } */
-
-figure{
-  margin: 0;
-}
-
-figcaption{
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-nav{
-  background: none;
-}
-
-.active{
-  position: absolute;
-  display: block;
-  background: white;
-  width: 50%;
-  top: 0;
-  left: 0;
+container {
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-ul{
-  display: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#color-picker {
+  /* width: 100%;
+  height: 100%; */
+  border: 3px solid rgba(15, 15, 15, 0.2);
 }
 
-ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  font-size: .9em;
-  display: block;
-  padding: 1.5em 3em;
+.info {
+  width: 12em;
+  display: flex;
+  margin-left: 4em;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-main{
-  background: white;
-  padding: 1em 1.4em;
-}
-
-h1{
-  margin: 0;
-}
-
-p{
-  font-size: 1.2em;
-  line-height: 1.5em;
-}
-
-/* Contact button */
-.cta{
-  display: block;
-  color: #fff;
-  background: grey;
-  text-decoration: none;
-  padding: 8px 50px;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-@media only screen and (min-width:768px){
-  body{
-      display: grid;
-      grid-template-columns: 20% auto;
-      /* grid-gap: 10px; */
-      padding: 2em;
-  }
-
-  .corner {
-      display: none;
-  }
-
-  aside{
-      background: grey;
-      grid-template-columns: auto;
-      /* Sizing of rows, first contains avatar div
-      questin should i keep it?? */
-      grid-template-rows:20% auto;
-      padding: 0;
-  }
-
-  /* Decide of you want to use the avatar !!*/
-
-  main{
-      padding: 4em;
-      background: white:
-      /* Image by Gordon Johnson from Pixabay */
-      /*background: white url(' ../images/brain_corner.svg') no-repeat bottom center;
-      background-size: 70%;*/
-  }
-
-  #avatar{
-      /*This makes the border a circle */
-      border-radius: 50%;
-      background-color: black;
-      width: 50px;
-      height: 50px;
-      /* top righ bottom left */
-      margin: 2em auto 1em auto;
-  }
-
-  figcaption{
-      margin: 0.5em;
-      text-align: center;
-  }
-
-  ul{
-      /* allows to display the list */
-      display: block;
-      margin-top: 2em;
-      /* e.g. if the phone is flipped into landscape mode
-      will allow for the  css formating to remain correct
-      for the screen size
-
-      Important flag helps overwrite the absolute style
-      in the .active class*/
-      position: relative !important;
-      background: none !important;
-      width: 100% !important;
-  }
-
-/* using seudo class hover allows to have a hover animation */
-  ul li a:hover{
-    background-color: white;
-  }
-
-  .cta{
-    display: inline-block;
-    font-size: 1.3em;
-    padding: 0.3em 3em;
-  }
-
-  h1{
-    font-size: 3em;
-    margin-top: 2em;
-  }
-
-  p{
-    font-size: 1.5em; 
-  }
+.selected {
+  font-family: 'Cute Font';
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid rgba(15, 15, 15, 0.2);
 }

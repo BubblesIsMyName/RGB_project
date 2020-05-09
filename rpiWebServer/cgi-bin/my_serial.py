@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # impert for correct debug and cgi
-import cgi, cgitb 
+import cgi, cgitb
 cgitb.enable()
 # PySerial module
 import serial
@@ -27,12 +27,18 @@ ser.write(colour_string)
 time.sleep(2) #pause
 ser.close()
 
-print "Content-type:text/html\r\n\r\n"
-print "<html>"
-print "<head>"
-print "<title>Is it the right colour?</title>"
-print "</head>"
-print "<body>"
-print "<h2>colour codes red = %s green = %s blue = %s </h2>" % (red_colour_val, green_colour_val, blue_colour_val)
-print "</body>"
-print "</html>"
+redirect_url = "http://192.168.0.37/"
+
+print 'Content-type:text/html\r\n\r\n'
+print 'Location: %s' %redirect_url
+print # needs to be empty...
+print '<html>'
+print '<head>'
+print '<title>Is it the right colour?</title>'
+print '<meta http-equiv="refresh" content="5;url=%s" />' %redirect_url
+print '</head>'
+print '<body>'
+print '<h2>colour codes red = %s green = %s blue = %s </h2>' % (red_colour_val, green_colour_val, blue_colour_val)
+print 'Redirecting... <a href="%s">Click here if you are not redirected</a>' %redirect_url
+print '</body>'
+print '</html>'
